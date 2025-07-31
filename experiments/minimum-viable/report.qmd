@@ -1,0 +1,340 @@
+---
+title: "Minimum Viable Pedadog Experiment Report"
+format: 
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    fig-width: 10
+    fig-height: 6
+execute:
+  echo: false
+  warning: false
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from pathlib import Path
+import json
+
+# Set up matplotlib and seaborn styling
+plt.style.use('seaborn-v0_8')
+sns.set_palette("husl")
+
+# Load data
+data_dir = Path('processed_data')
+figures_dir = Path('figures')
+figures_dir.mkdir(exist_ok=True)
+
+# Load belief distributions
+beliefs_df = pd.read_parquet(data_dir / 'belief_distributions.parquet')
+
+# Load arguments
+with open(data_dir / 'extracted_arguments.json', 'r') as f:
+    arguments = json.load(f)
+
+# Load responses
+with open(data_dir / 'judge_response.txt', 'r') as f:
+    judge_response = f.read()
+
+with open(data_dir / 'appellant_response.txt', 'r') as f:
+    appellant_response = f.read()
+```
+
+## Experiment Overview
+
+This report presents the results of the minimum viable pedadog experiment, which measures belief distributions of a simulated judge model before and after introducing an appellant's response to judicial questioning.
+
+### Experimental Data Summary
+
+```{python}
+print(f"Total belief measurements: {len(beliefs_df)}")
+print(f"Unique questions: {beliefs_df['question_text'].nunique()}")
+print(f"Models: {', '.join(beliefs_df['model_name'].unique())}")
+print(f"Belief types: {', '.join(beliefs_df['belief_type'].unique())}")
+print(f"Experiment stages: {', '.join(beliefs_df['experiment_stage'].unique())}")
+```
+
+### Case Arguments Analyzed
+
+```{python}
+print("Arguments extracted from legal briefs:")
+for i, arg in enumerate(arguments):
+    print(f"{i+1}. [{arg['type']}] {arg['argument']}")
+    if arg['sub_arguments']:
+        for sub_arg in arg['sub_arguments']:
+            print(f"   - {sub_arg}")
+```
+
+## Judge Response Analysis
+
+### Initial Judge Response to Petitioner Brief
+
+```{python}
+print("Judge Response:")
+print("=" * 50)
+print(judge_response[:500] + "..." if len(judge_response) > 500 else judge_response)
+```
+
+### Appellant Response to Judge
+
+```{python}
+print("Appellant Response:")
+print("=" * 50)
+print(appellant_response[:500] + "..." if len(appellant_response) > 500 else appellant_response)
+```
+
+## Belief Distribution Analysis
+
+### Case Belief Distributions: Before vs After Appellant Response
+
+This section compares the judge's belief distributions about case arguments before and after the appellant's response.
+
+```{python}
+# Filter case beliefs
+case_beliefs = beliefs_df[beliefs_df['belief_type'] == 'case'].copy()
+
+if not case_beliefs.empty:
+    # Create comparison plot
+    fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+    
+    # Initial beliefs
+    initial_data = case_beliefs[case_beliefs['experiment_stage'] == 'initial']
+    if not initial_data.empty:
+        sns.boxplot(data=initial_data, y='question_text', x='answer', ax=axes[0])
+        axes[0].set_title('Initial Case Beliefs\n(Before Appellant Response)')
+        axes[0].set_xlabel('Belief Score (0-1)')
+        axes[0].set_ylabel('Case Arguments')
+        axes[0].set_xlim(0, 1)
+    
+    # Final beliefs
+    final_data = case_beliefs[case_beliefs['experiment_stage'] == 'final']
+    if not final_data.empty:
+        sns.boxplot(data=final_data, y='question_text', x='answer', ax=axes[1])
+        axes[1].set_title('Final Case Beliefs\n(After Appellant Response)')
+        axes[1].set_xlabel('Belief Score (0-1)')
+        axes[1].set_ylabel('Case Arguments')
+        axes[1].set_xlim(0, 1)
+    
+    plt.tight_layout()
+    plt.savefig(figures_dir / 'case_beliefs_comparison.svg', format='svg', dpi=300, bbox_inches='tight')
+    plt.show()
+    
+    # Statistical summary
+    print("\nCase Belief Statistics:")
+    summary_stats = case_beliefs.groupby(['experiment_stage', 'question_text'])['answer'].agg(['mean', 'std', 'count']).round(3)
+    print(summary_stats)
+else:
+    print("No case belief data available")
+```
+
+### Character Belief Distributions
+
+This section shows the judge's assessment of the appellant's character attributes based on the legal interaction.
+
+```{python}
+# Filter character beliefs
+character_beliefs = beliefs_df[beliefs_df['belief_type'] == 'character'].copy()
+
+if not character_beliefs.empty:
+    # Create character beliefs plot
+    plt.figure(figsize=(12, 8))
+    
+    # Truncate long question texts for better display
+    character_beliefs['question_short'] = character_beliefs['question_text'].str[:50] + '...'
+    
+    sns.boxplot(data=character_beliefs, y='question_short', x='answer')
+    plt.title('Character Belief Distributions\n(Judge Assessment of Appellant)')
+    plt.xlabel('Belief Score (0-1)')
+    plt.ylabel('Character Attributes')
+    plt.xlim(0, 1)
+    
+    plt.tight_layout()
+    plt.savefig(figures_dir / 'character_beliefs.svg', format='svg', dpi=300, bbox_inches='tight')
+    plt.show()
+    
+    # Statistical summary
+    print("\nCharacter Belief Statistics:")
+    char_summary = character_beliefs.groupby('question_text')['answer'].agg(['mean', 'std', 'count']).round(3)
+    print(char_summary)
+else:
+    print("No character belief data available")
+```
+
+### Belief Change Analysis
+
+Analyzing how case beliefs changed after the appellant's response:
+
+```{python}
+if not case_beliefs.empty:
+    # Calculate belief changes
+    initial_means = case_beliefs[case_beliefs['experiment_stage'] == 'initial'].groupby('question_text')['answer'].mean()
+    final_means = case_beliefs[case_beliefs['experiment_stage'] == 'final'].groupby('question_text')['answer'].mean()
+    
+    # Merge and calculate changes
+    belief_changes = pd.DataFrame({
+        'initial_belief': initial_means,
+        'final_belief': final_means
+    }).dropna()
+    
+    belief_changes['change'] = belief_changes['final_belief'] - belief_changes['initial_belief']
+    belief_changes['abs_change'] = abs(belief_changes['change'])
+    
+    if not belief_changes.empty:
+        # Plot belief changes
+        plt.figure(figsize=(10, 6))
+        
+        x_pos = range(len(belief_changes))
+        colors = ['red' if x < 0 else 'green' for x in belief_changes['change']]
+        
+        plt.bar(x_pos, belief_changes['change'], color=colors, alpha=0.7)
+        plt.axhline(y=0, color='black', linestyle='-', alpha=0.3)
+        
+        plt.title('Change in Case Beliefs After Appellant Response')
+        plt.xlabel('Case Arguments')
+        plt.ylabel('Belief Change (Final - Initial)')
+        plt.xticks(x_pos, [q[:30] + '...' for q in belief_changes.index], rotation=45, ha='right')
+        
+        plt.tight_layout()
+        plt.savefig(figures_dir / 'belief_changes.svg', format='svg', dpi=300, bbox_inches='tight')
+        plt.show()
+        
+        print("\nBelief Change Analysis:")
+        print(belief_changes.round(3))
+        print(f"\nAverage absolute change: {belief_changes['abs_change'].mean():.3f}")
+        print(f"Maximum change: {belief_changes['abs_change'].max():.3f}")
+    else:
+        print("Insufficient data for belief change analysis")
+else:
+    print("No case belief data for change analysis")
+```
+
+### Distribution Shape Analysis
+
+Examining the shape and spread of belief distributions:
+
+```{python}
+# Overall distribution analysis
+plt.figure(figsize=(12, 5))
+
+# Subplot 1: Overall distribution by type
+plt.subplot(1, 2, 1)
+sns.histplot(data=beliefs_df, x='answer', hue='belief_type', alpha=0.7, bins=20)
+plt.title('Overall Belief Score Distributions')
+plt.xlabel('Belief Score (0-1)')
+plt.ylabel('Frequency')
+
+# Subplot 2: Distribution by experiment stage (case beliefs only)
+plt.subplot(1, 2, 2)
+if not case_beliefs.empty:
+    sns.histplot(data=case_beliefs, x='answer', hue='experiment_stage', alpha=0.7, bins=20)
+    plt.title('Case Belief Distributions by Stage')
+    plt.xlabel('Belief Score (0-1)')
+    plt.ylabel('Frequency')
+else:
+    plt.text(0.5, 0.5, 'No case belief data', ha='center', va='center', transform=plt.gca().transAxes)
+
+plt.tight_layout()
+plt.savefig(figures_dir / 'distribution_analysis.svg', format='svg', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+## Model Performance Metrics
+
+### Response Quality Assessment
+
+```{python}
+# Calculate rejection rates and response quality metrics
+model_performance = beliefs_df.groupby('model_name').agg({
+    'answer': ['count', 'mean', 'std'],
+    'runtime_s': ['mean', 'std']
+}).round(3)
+
+model_performance.columns = ['Total_Responses', 'Mean_Score', 'Score_StdDev', 'Mean_Runtime', 'Runtime_StdDev']
+
+print("Model Performance Summary:")
+print(model_performance)
+```
+
+### Runtime Analysis
+
+```{python}
+# Runtime distribution
+plt.figure(figsize=(10, 4))
+
+plt.subplot(1, 2, 1)
+sns.histplot(data=beliefs_df, x='runtime_s', bins=20)
+plt.title('Response Time Distribution')
+plt.xlabel('Runtime (seconds)')
+plt.ylabel('Frequency')
+
+plt.subplot(1, 2, 2)
+sns.boxplot(data=beliefs_df, y='model_name', x='runtime_s')
+plt.title('Runtime by Model')
+plt.xlabel('Runtime (seconds)')
+plt.ylabel('Model')
+
+plt.tight_layout()
+plt.savefig(figures_dir / 'runtime_analysis.svg', format='svg', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+## Conclusions
+
+### Key Findings
+
+```{python}
+print("Experiment Summary:")
+print("=" * 50)
+
+# Case belief analysis
+if not case_beliefs.empty and 'change' in locals():
+    print(f"• Total case arguments analyzed: {len(arguments)}")
+    print(f"• Average belief change after appellant response: {belief_changes['change'].mean():.3f}")
+    
+    if belief_changes['change'].mean() > 0:
+        print("• Overall trend: Beliefs became MORE favorable after appellant response")
+    elif belief_changes['change'].mean() < 0:
+        print("• Overall trend: Beliefs became LESS favorable after appellant response")
+    else:
+        print("• Overall trend: No significant change in beliefs")
+
+# Character belief analysis
+if not character_beliefs.empty:
+    char_mean = character_beliefs['answer'].mean()
+    print(f"• Average character assessment score: {char_mean:.3f}")
+    
+    if char_mean > 0.7:
+        print("• Character assessment: Highly favorable")
+    elif char_mean > 0.5:
+        print("• Character assessment: Moderately favorable")
+    elif char_mean > 0.3:
+        print("• Character assessment: Mixed/neutral")
+    else:
+        print("• Character assessment: Unfavorable")
+
+# Technical metrics
+total_time = beliefs_df['runtime_s'].sum()
+print(f"• Total experiment runtime: {total_time:.1f} seconds")
+print(f"• Average response time: {beliefs_df['runtime_s'].mean():.2f} seconds")
+print(f"• Total API calls made: {len(beliefs_df)}")
+```
+
+### Methodological Notes
+
+This experiment demonstrates the core pedadog framework for measuring distributional beliefs in legal contexts. The approach allows for:
+
+1. **Systematic belief measurement** using Monte Carlo sampling
+2. **Before/after comparison** to assess impact of legal interactions
+3. **Multi-dimensional assessment** covering both case merits and character attributes
+4. **Quantitative analysis** of judicial decision-making patterns
+
+Future experiments can extend this framework with:
+- Multiple judge models for comparative analysis
+- Larger sample sizes for statistical significance
+- Real case briefs and transcripts
+- Longitudinal tracking of belief evolution
