@@ -1,0 +1,2 @@
+model_name,Total_Responses,Mean_Score,Score_StdDev,Mean_Runtime,Runtime_StdDev
+judge-gpt-4o,83,0.892,0.1,2.528,2.317
