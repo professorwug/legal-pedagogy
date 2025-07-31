@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Cloud data synchronization script for aiconfi project.
+Cloud data synchronization script for pedadog project.
 
 This script provides functionality to:
 1. Sync zip files from local data directory to cloud storage with timestamps
@@ -32,11 +32,11 @@ class CloudDataSync:
             raise ValueError("CLOUD_STORAGE_DIR environment variable not set")
         
         self.local_data_dir = Path(__file__).parent.parent / "data"
-        self.cloud_aiconfi_dir = Path(self.cloud_storage_dir) / "aiconfi"
+        self.cloud_pedadog_dir = Path(self.cloud_storage_dir) / "pedadog"
         
         # Ensure directories exist
         self.local_data_dir.mkdir(exist_ok=True)
-        self.cloud_aiconfi_dir.mkdir(parents=True, exist_ok=True)
+        self.cloud_pedadog_dir.mkdir(parents=True, exist_ok=True)
     
     def get_timestamp(self) -> str:
         """Generate a timestamp string for versioning."""
@@ -48,7 +48,7 @@ class CloudDataSync:
     
     def find_cloud_zip_files(self) -> List[Path]:
         """Find all zip files in the cloud storage directory."""
-        return list(self.cloud_aiconfi_dir.glob("**/*.zip"))
+        return list(self.cloud_pedadog_dir.glob("**/*.zip"))
     
     def extract_base_filename(self, zip_path: Path) -> str:
         """Extract the base filename without timestamp and extension."""
@@ -77,7 +77,7 @@ class CloudDataSync:
             timestamp = self.get_timestamp()
             base_name = local_zip.stem
             new_name = f"{base_name}_{timestamp}.zip"
-            cloud_path = self.cloud_aiconfi_dir / new_name
+            cloud_path = self.cloud_pedadog_dir / new_name
             
             print(f"  Copying {local_zip.name} -> {cloud_path.name}")
             shutil.copy2(local_zip, cloud_path)

@@ -1,0 +1,107 @@
+# Snakefile for minimum viable pedadog experiment
+# Defines the computational pipeline for the experiment
+
+import yaml
+from pathlib import Path
+
+# Load configuration
+config_path = Path("../../config.yaml")
+with open(config_path, 'r') as f:
+    CONFIG = yaml.safe_load(f)
+
+# Set test run mode
+TEST_RUN = CONFIG['experiments']['minimum_viable'].get('test_run', False)
+
+# Define file paths
+DATA_DIR = Path("processed_data")
+FIGURES_DIR = Path("figures")
+
+# Input files (may not exist for test runs)
+PETITIONER_PDF = Path("../../data/petitioner.pdf") if Path("../../data/petitioner.pdf").exists() else None
+RESPONDENT_PDF = Path("../../data/respondent.pdf") if Path("../../data/respondent.pdf").exists() else None
+
+# Character belief files
+RUBRIC_FILE = Path("../../data/moot_rubric.txt")
+TEMPLATE_FILE = Path("../../data/character_attribute_question.txt")
+
+# Output files
+ARGUMENTS_JSON = DATA_DIR / "extracted_arguments.json"
+CHARACTER_QUESTIONS = DATA_DIR / "character_questions.json"
+JUDGE_RESPONSE = DATA_DIR / "judge_response.txt"
+APPELLANT_RESPONSE = DATA_DIR / "appellant_response.txt"
+BELIEF_RESULTS = DATA_DIR / "belief_distributions.parquet"
+BELIEF_CSV = DATA_DIR / "belief_distributions.csv"
+REPORT_HTML = "report.html"
+
+# Ensure directories exist
+DATA_DIR.mkdir(exist_ok=True)
+FIGURES_DIR.mkdir(exist_ok=True)
+
+rule all:
+    input:
+        BELIEF_RESULTS,
+        BELIEF_CSV,
+        REPORT_HTML
+    params:
+        test_run=TEST_RUN
+
+rule run_main_experiment:
+    input:
+        petitioner_pdf=PETITIONER_PDF if PETITIONER_PDF else [],
+        respondent_pdf=RESPONDENT_PDF if RESPONDENT_PDF else [],
+        config="../../config.yaml"
+    output:
+        arguments=ARGUMENTS_JSON,
+        judge_response=JUDGE_RESPONSE,
+        appellant_response=APPELLANT_RESPONSE,
+        beliefs_parquet=BELIEF_RESULTS,
+        beliefs_csv=BELIEF_CSV
+    params:
+        test_run=TEST_RUN,
+        n_samples=3 if TEST_RUN else CONFIG['sampling']['n_samples']
+    script:
+        "main.py"
+
+rule generate_character_questions:
+    input:
+        rubric=RUBRIC_FILE,
+        template=TEMPLATE_FILE
+    output:
+        questions=CHARACTER_QUESTIONS
+    params:
+        test_run=TEST_RUN
+    shell:
+        "pixi run python -m pedadog.make_character_questions "
+        "--rubric {input.rubric} --template {input.template} --output {output.questions}"
+
+rule render_report:
+    input:
+        beliefs=BELIEF_RESULTS,
+        arguments=ARGUMENTS_JSON,
+        judge_response=JUDGE_RESPONSE,
+        appellant_response=APPELLANT_RESPONSE
+    output:
+        html=REPORT_HTML
+    params:
+        test_run=TEST_RUN
+    shell:
+        "pixi run quarto render report.qmd"
+
+# Test rule to check if everything runs without errors
+rule test_pipeline:
+    input:
+        config="../../config.yaml"
+    output:
+        test_flag=DATA_DIR / "test_completed.flag"
+    params:
+        test_run=True,
+        n_samples=2  # Minimal samples for testing
+    script:
+        "main.py"
+    shell:
+        "touch {output.test_flag}"
+
+# Clean up generated files
+rule clean:
+    shell:
+        "rm -rf {DATA_DIR} {FIGURES_DIR} {REPORT_HTML}"
