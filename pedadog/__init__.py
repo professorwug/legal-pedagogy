@@ -17,7 +17,7 @@ from .generate_belief_vector import (
     generate_belief_vector_from_arguments,
     generate_belief_vector_from_pdfs
 )
-from .make_character_questions import create_character_questions_file, load_character_questions
+from .make_character_questions import create_character_questions_file, load_character_questions, get_question_texts
 from .models import (
     BaseLLM, 
     AISandboxModel,
@@ -44,6 +44,7 @@ __all__ = [
     "generate_belief_vector_from_pdfs",
     "create_character_questions_file",
     "load_character_questions",
+    "get_question_texts",
     "BaseLLM",
     "AISandboxModel",
     "O3MiniModel",

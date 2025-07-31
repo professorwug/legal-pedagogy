@@ -96,10 +96,8 @@ rule test_pipeline:
     params:
         test_run=True,
         n_samples=2  # Minimal samples for testing
-    script:
-        "main.py"
     shell:
-        "touch {output.test_flag}"
+        "pixi run python main.py && touch {output.test_flag}"
 
 # Clean up generated files
 rule clean:
