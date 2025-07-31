@@ -1,0 +1,90 @@
+[
+  {
+    "argument": "When the FDA rejects a manufacturer’s proposal to warn about a disclosed risk, the manufacturer cannot be penalized for failing to warn of that risk",
+    "sub_arguments": [
+      {
+        "argument": "Failure-to-warn claims are preempted if federal law would have forbidden the manufacturer to revise its label"
+      },
+      {
+        "argument": "Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted"
+      },
+      {
+        "argument": "Respondents’ failure-to-warn claims are preempted"
+      }
+    ],
+    "type": "petitioner"
+  },
+  {
+    "argument": "The Third Circuit misunderstood Levine and the regulatory scheme",
+    "sub_arguments": [
+      {
+        "argument": "The FDA’s real-world action here eliminates the need for counterfactual inquiry"
+      },
+      {
+        "argument": "The Third Circuit’s approach also led it astray in other ways"
+      }
+    ],
+    "type": "petitioner"
+  },
+  {
+    "argument": "In light of the FDA’s position here, Merck must prevail",
+    "sub_arguments": [],
+    "type": "petitioner"
+  },
+  {
+    "argument": "Failure-to-warn claims against brand-name drug manufacturers are not preempted unless the manufacturer shows by clear evidence that FDA would have rescinded an adequate label change",
+    "sub_arguments": [
+      {
+        "argument": "The FDCA does not expressly preempt failure-to-warn claims against brand-name drug manufacturers, and such claims pose no obstacle to the statute’s purposes"
+      },
+      {
+        "argument": "A brand-name drug manufacturer has the power to strengthen a drug label to comply with state law"
+      },
+      {
+        "argument": "The 2007 FDCA amendments do not preempt state law"
+      }
+    ],
+    "type": "respondent"
+  },
+  {
+    "argument": "Merck has not shown by clear evidence that FDA would have rescinded an adequate warning of atypical femoral fractures",
+    "sub_arguments": [
+      {
+        "argument": "The Complete Response Letter regarding Merck’s proposed stress-fracture warning did not preclude Merck from adding an adequate warning of atypical femoral fractures",
+        "sub_arguments": [
+          {
+            "argument": "Merck never proposed an accurate warning of atypical femoral fractures"
+          },
+          {
+            "argument": "The Complete Response Letter did not preclude Merck from adding an adequate warning of atypical femoral fractures through a CBE supplement"
+          },
+          {
+            "argument": "The government’s post hoc interpretations of the Complete Response Letter are implausible and inconsistent with FDA regulations"
+          }
+        ]
+      },
+      {
+        "argument": "Merck’s informal communications with FDA do not establish preemption"
+      },
+      {
+        "argument": "FDA’s decision to mandate an atypical-femoral-fracture warning undercuts Merck’s preemption defense"
+      }
+    ],
+    "type": "respondent"
+  },
+  {
+    "argument": "The Third Circuit’s guidance for the district court on remand was correct",
+    "sub_arguments": [
+      {
+        "argument": "A jury should resolve disputed factual questions necessary for preemption"
+      },
+      {
+        "argument": "The Third Circuit correctly required a heightened standard of proof for impossibility preemption under Levine"
+      },
+      {
+        "argument": "Granting summary judgment would violate respondents’ procedural rights"
+      }
+    ],
+    "type": "respondent"
+  }
+]
