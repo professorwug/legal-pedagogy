@@ -33,7 +33,8 @@ dependencies = [
     "typer>=0.9.0,<0.10",
     "rich>=13.7.0,<13.8",
     "python-dotenv",
-    "anthropic>=0.49.0,<0.50",
+    "openai>=1.0.0",
+    "tqdm>=4.64.0",
 ]
 
 [project.optional-dependencies]

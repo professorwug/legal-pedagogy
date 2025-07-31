@@ -8245,7 +8245,7 @@ packages:
 - pypi: ./
   name: pedadog
   version: 0.1.0
-  sha256: 7ab4a645ebf2b19eafa971b21f84a0d66b768a735cc4a1413261fd860775321c
+  sha256: 1e9c38cd763fe33e104351919c31a3ac0cc7027cade6796b7a2cbe8512dd433d
   requires_dist:
   - numpy>=1.23.5
   - pandas>=2.2.0,<2.3
@@ -8256,7 +8256,8 @@ packages:
   - typer>=0.9.0,<0.10
   - rich>=13.7.0,<13.8
   - python-dotenv
-  - anthropic>=0.49.0,<0.50
+  - openai>=1.0.0
+  - tqdm>=4.64.0
   - pytest ; extra == 'dev'
   - ruff ; extra == 'dev'
   - mypy ; extra == 'dev'

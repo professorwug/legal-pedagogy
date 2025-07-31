@@ -20,12 +20,16 @@ from .generate_belief_vector import (
 from .make_character_questions import create_character_questions_file, load_character_questions
 from .models import (
     BaseLLM, 
-    AnthropicModel, 
+    AISandboxModel,
+    O3MiniModel,
     MockLLM,
-    create_anthropic_model,
+    create_ai_sandbox_model,
+    create_o3_mini_model,
     create_mock_model,
     get_default_model,
-    set_default_llm
+    set_default_llm,
+    sandbox_llm,
+    prompt_o3_mini
 )
 
 __all__ = [
@@ -41,10 +45,14 @@ __all__ = [
     "create_character_questions_file",
     "load_character_questions",
     "BaseLLM",
-    "AnthropicModel",
+    "AISandboxModel",
+    "O3MiniModel",
     "MockLLM", 
-    "create_anthropic_model",
+    "create_ai_sandbox_model",
+    "create_o3_mini_model", 
     "create_mock_model",
     "get_default_model",
-    "set_default_llm"
+    "set_default_llm",
+    "sandbox_llm",
+    "prompt_o3_mini"
 ]
