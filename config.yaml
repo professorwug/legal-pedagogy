@@ -3,26 +3,41 @@
 
 llms:
   default:
-    provider: "anthropic"
-    model_name: "claude-3-haiku-20240307"
+    provider: "ai_sandbox"
+    model_name: "gpt-4o-mini"
     temperature: 0.7
+    top_p: 0.5
     max_tokens: 1024
   
   judge_model:
-    provider: "anthropic"
-    model_name: "claude-3-haiku-20240307"
+    provider: "ai_sandbox"
+    model_name: "gpt-4o"
+    system_prompt: "You are Justice Brett Kavanaugh of the US Supreme Court. Please respond as he would during oral arguments, considering legal precedent and constitutional interpretation."
     temperature: 0.5
-    max_tokens: 512
+    top_p: 0.3
+    max_tokens: 1024
     
   appellant_model:
-    provider: "anthropic"
-    model_name: "claude-3-haiku-20240307"
+    provider: "ai_sandbox"
+    model_name: "gpt-4o-mini"
+    system_prompt: "You are an experienced lawyer making an oral argument to the Supreme Court. Present your case clearly and persuasively, addressing potential concerns from the justices."
     temperature: 0.8
+    top_p: 0.7
     max_tokens: 1024
+
+  o3_mini_model:
+    provider: "o3_mini"
+    system_prompt: "You are a helpful legal analysis assistant."
 
 sampling:
   n_samples: 20          # Monte-Carlo draws per question
   seed: 42               # global RNG seed (propagated to numpy & torch)
+  
+# Optimized settings for belief measurement
+belief_measurement:
+  temperature: 0.2       # Lower temperature for consistent numeric responses
+  max_tokens: 20         # Short responses for numeric extraction
+  system_prompt: "You are a legal expert. When asked to rate agreement, respond with only a decimal number between 0 and 1, where 0 means strongly disagree and 1 means strongly agree. Do not provide explanations."
 
 numeric_filter:
   regex: "^-?(?:0(?:\\.\\d+)?|1(?:\\.0+)?)$"  # accept 0—1 floats
@@ -65,7 +80,8 @@ experiments:
       judge_behavior: "You are Justice Brett Kavanaugh of the US Supreme Court. Please respond as he would during oral arguments, considering legal precedent and constitutional interpretation."
       appellant_behavior: "You are an experienced lawyer making an oral argument to the Supreme Court. Present your case clearly and persuasively, addressing potential concerns from the justices."
       
-      belief_measurement: "On a scale of 0 to 1, how much do you agree with this legal argument?"
+      belief_measurement: "RESPOND WITH ONLY A NUMBER 0-1: How much do you agree with this legal argument?"
+      belief_measurement_system: "You are a legal expert. When asked to rate agreement, respond with only a decimal number between 0 and 1, where 0 means strongly disagree and 1 means strongly agree. Do not provide explanations."
       
     character_attributes:
       - "judicial temperament"

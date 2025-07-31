@@ -1,0 +1,26 @@
+[
+  {
+    "argument": "The constitutional provision requires strict scrutiny analysis",
+    "sub_arguments": [
+      "Previous precedent supports this interpretation",
+      "The text is unambiguous"
+    ],
+    "type": "petitioner"
+  },
+  {
+    "argument": "The lower court decision should be reversed",
+    "sub_arguments": [
+      "Procedural errors were made",
+      "Evidence was insufficient"
+    ],
+    "type": "petitioner"
+  },
+  {
+    "argument": "The statute is constitutional as written",
+    "sub_arguments": [
+      "Legislative intent is clear",
+      "No fundamental rights are violated"
+    ],
+    "type": "respondent"
+  }
+]
