@@ -1,0 +1,398 @@
+[
+  {
+    "timestamp": "2025-08-13T13:53:36.421517",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: When the FDA rejects a manufacturer\u2019s proposal to warn about a disclosed risk, the manufacturer cannot be penalized for failing to warn of that risk",
+    "query_number": 1,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.421649",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: When the FDA rejects a manufacturer\u2019s proposal to warn about a disclosed risk, the manufacturer cannot be penalized for failing to warn of that risk",
+    "query_number": 2,
+    "response": "0.7"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.421886",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: When the FDA rejects a manufacturer\u2019s proposal to warn about a disclosed risk, the manufacturer cannot be penalized for failing to warn of that risk",
+    "query_number": 3,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.422435",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Failure-to-warn claims are preempted if federal law would have forbidden the manufacturer to revise its label",
+    "query_number": 4,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.422534",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Failure-to-warn claims are preempted if federal law would have forbidden the manufacturer to revise its label",
+    "query_number": 5,
+    "response": "0.6"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.422821",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Failure-to-warn claims are preempted if federal law would have forbidden the manufacturer to revise its label",
+    "query_number": 6,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.423358",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted",
+    "query_number": 7,
+    "response": "0.7"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.423479",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted",
+    "query_number": 8,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.423585",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted",
+    "query_number": 9,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.424373",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Respondents\u2019 failure-to-warn claims are preempted",
+    "query_number": 10,
+    "response": "0.6"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.424492",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Respondents\u2019 failure-to-warn claims are preempted",
+    "query_number": 11,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.424728",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: Respondents\u2019 failure-to-warn claims are preempted",
+    "query_number": 12,
+    "response": "0.7"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.425398",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: The Third Circuit misunderstood Levine and the regulatory scheme",
+    "query_number": 13,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.425505",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: The Third Circuit misunderstood Levine and the regulatory scheme",
+    "query_number": 14,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.425751",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: The Third Circuit misunderstood Levine and the regulatory scheme",
+    "query_number": 15,
+    "response": "0.6"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.426483",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: The fda\u2019s real-world action here eliminates the need for counterfactual inquiry",
+    "query_number": 16,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.426599",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: The fda\u2019s real-world action here eliminates the need for counterfactual inquiry",
+    "query_number": 17,
+    "response": "0.7"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.426868",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: The fda\u2019s real-world action here eliminates the need for counterfactual inquiry",
+    "query_number": 18,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.427843",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: The third circuit\u2019s approach also led it astray in other ways",
+    "query_number": 19,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.427958",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: The third circuit\u2019s approach also led it astray in other ways",
+    "query_number": 20,
+    "response": "0.6"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.428084",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nHow strongly do you agree with the petitioner's sub-argument: The third circuit\u2019s approach also led it astray in other ways",
+    "query_number": 21,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.429036",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: In light of the fda\u2019s position here, Merck must prevail",
+    "query_number": 22,
+    "response": "0.7"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.429157",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: In light of the fda\u2019s position here, Merck must prevail",
+    "query_number": 23,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.429452",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: In light of the fda\u2019s position here, Merck must prevail",
+    "query_number": 24,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.430259",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 25,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.430366",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 26,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.430479",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 27,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.431416",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 28,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.431522",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 29,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.431809",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 30,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.432759",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 31,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.432883",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 32,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.433175",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 33,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.434125",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 34,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.434239",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 35,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.434351",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 36,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.437557",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 37,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.437684",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 38,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.438153",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 39,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.439026",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 40,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.439134",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 41,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.439409",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 42,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.440513",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 43,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.440621",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 44,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.440730",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 45,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.442235",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court\u2019s questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 46,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.442361",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court\u2019s questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 47,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.442487",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court\u2019s questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 48,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.444105",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 49,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.444210",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 50,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.444816",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 51,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.445893",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 52,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.446005",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 53,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.446306",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 54,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.447682",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 55,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.447802",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 56,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.448549",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 57,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.449795",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 58,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.449900",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 59,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.450009",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 60,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.451834",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 61,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.451946",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 62,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.452086",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 63,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.453982",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 64,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.454113",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 65,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T13:53:36.454408",
+    "query": "This is a Supreme Court oral argument about pharmaceutical regulation and FDA approval processes.\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 66,
+    "response": "0.2"
+  }
+]

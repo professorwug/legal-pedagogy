@@ -7,11 +7,21 @@ Functions which expose core functionality of pedadog in two API calls
 
 """
 import json
+import yaml
 from pathlib import Path
-from typing import List,Dict, Any, Optional
+from typing import List, Dict, Any, Optional
+import numpy as np
 
 from .generate_belief_vector import extract_arguments_from_pdfs
 from .models import AISandboxModel
+from .thermometer import thermo, BeliefResults
+
+
+def _load_config() -> dict:
+    """Load configuration from config.yaml."""
+    config_path = Path(__file__).parent.parent / "config.yaml"
+    with config_path.open() as f:
+        return yaml.safe_load(f)
 
 def extract_arguments(
         pdf_petitioner:Path, 
@@ -43,8 +53,9 @@ def extract_arguments(
 def belief_vector(
         all_arguments, # list of dictionaries in the argument format
         context, # relevant transcript with oral argument interactions
-        *judge_callables, # functions with method and .prompt(context, prompt) and the built in prompts/tooling to simulate supreme court justices. We separate the context and prompt to help future caching efforts. 
+        *judge_callables, # functions with method and .prompt(context, prompt) and the built in prompts/tooling to simulate supreme court justices. We separate the context and prompt to help future caching efforts.
         path_to_character_rubric=None,
+        n_samples=20,  # number of Monte Carlo samples per question
 ):
     """
     Returns a belief distribution for each judge, in order passed:
@@ -55,5 +66,94 @@ def belief_vector(
     }
     Belief distributions are taken both over the inputted arguments, as well as a set of 'character' beliefs about the competence, credibility, and professionality of the user.
     """
+
+    # Load templates from config
+    config = _load_config()
+    prompts = config["prompts"]
     
+    # Prepare questions from arguments
+    questions = []
+
+    # Extract main arguments and sub-arguments
+    for arg in all_arguments:
+        # Add main argument as a question
+        arg_type = arg.get("type", "unknown")
+        main_arg = prompts["argument_belief_template"].format(
+            arg_type=arg_type,
+            argument_text=arg["argument"]
+        )
+        questions.append(main_arg)
+
+        # Add sub-arguments if they exist
+        if arg.get("sub_arguments"):
+            for sub_arg in arg["sub_arguments"]:
+                if isinstance(sub_arg, dict) and "argument" in sub_arg:
+                    sub_arg_text = prompts["sub_argument_belief_template"].format(
+                        arg_type=arg_type,
+                        sub_argument_text=sub_arg["argument"]
+                    )
+                    questions.append(sub_arg_text)
+                elif isinstance(sub_arg, str):
+                    sub_arg_text = prompts["sub_argument_belief_template"].format(
+                        arg_type=arg_type,
+                        sub_argument_text=sub_arg
+                    )
+                    questions.append(sub_arg_text)
+    
+    # Add character assessment questions if rubric is provided
+    if path_to_character_rubric:
+        try:
+            # Load character rubric (text file with one attribute per line)
+            rubric_path = Path(path_to_character_rubric)
+            with rubric_path.open() as f:
+                rubric_lines = f.readlines()
+            
+            # Create questions for each rubric item using config template
+            character_template = prompts["character_assessment_template"]
+            for line in rubric_lines:
+                line = line.strip()
+                if line and not line.startswith("#"):  # Skip empty lines and comments
+                    # Format the question using the template from config
+                    character_question = character_template.format(
+                        attribute_text=line
+                    )
+                    questions.append(character_question)
+                    
+        except (FileNotFoundError, IOError) as e:
+            print(f"Warning: Could not load character rubric: {e}")
+            # Continue without character questions if rubric can't be loaded
+    
+    # If no judges provided, return empty result
+    if not judge_callables:
+        return []
+
+    # Run thermometer with all judges and questions
+    belief_results = thermo(
+        questions=questions,
+        context=context,
+        models=list(judge_callables),
+        n_samples=n_samples,
+        min_val=0.0,
+        max_val=1.0
+    )
+
+    # Convert BeliefResults to the expected format
+    # Return a list of dictionaries, one per judge
+    belief_distribution_list = []
+
+    for judge in judge_callables:
+        judge_name = getattr(judge, "name", str(judge))
+        judge_beliefs = {}
+
+        # Get all results for this judge
+        judge_results = belief_results.get_model_results(judge_name)
+
+        # Convert each question's distribution to numpy array
+        for question, distribution in judge_results.items():
+            # Get the numeric values as a numpy array
+            values = np.array(distribution.values)
+            judge_beliefs[question] = values
+
+        belief_distribution_list.append(judge_beliefs)
+
     return belief_distribution_list

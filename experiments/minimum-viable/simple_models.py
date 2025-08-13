@@ -25,7 +25,7 @@ class AppellantModel:
     
     def __init__(self, base_model: BaseLLM, config: dict):
         self.base_model = base_model
-        self.behavior_prompt = config['experiments']['minimum_viable']['prompts']['appellant_behavior']
+        self.behavior_prompt = config['prompts']['appellant_behavior']
         self.name = f"appellant-{base_model.name}"
     
     def prompt(self, text: str) -> str:
@@ -39,7 +39,7 @@ class JudgeModel:
     
     def __init__(self, base_model: BaseLLM, config: dict):
         self.base_model = base_model
-        self.behavior_prompt = config['experiments']['minimum_viable']['prompts']['judge_behavior']
+        self.behavior_prompt = config['prompts']['judge_behavior']
         self.name = f"judge-{base_model.name}"
     
     def prompt(self, text: str) -> str:

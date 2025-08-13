@@ -25,35 +25,55 @@ llms:
     top_p: 0.7
     max_tokens: 1024
 
-  o3_mini_model:
-    provider: "o3_mini"
-    system_prompt: "You are a helpful legal analysis assistant."
+  # o3_mini_model:
+  #   provider: "o3_mini"
+  #   system_prompt: "You are a helpful legal analysis assistant."
 
 sampling:
   n_samples: 20          # Monte-Carlo draws per question
-  seed: 42               # global RNG seed (propagated to numpy & torch)
+  # seed: 42               # global RNG seed (propagated to numpy & torch)
   
-# Optimized settings for belief measurement
-belief_measurement:
-  temperature: 0.2       # Lower temperature for consistent numeric responses
-  max_tokens: 20         # Short responses for numeric extraction
-  system_prompt: "You are a legal expert. When asked to rate agreement, respond with only a decimal number between 0 and 1, where 0 means strongly disagree and 1 means strongly agree. Do not provide explanations."
+# # Optimized settings for belief measurement
+# belief_measurement:
+#   temperature: 0.2       # Lower temperature for consistent numeric responses
+#   max_tokens: 20         # Short responses for numeric extraction
+#   system_prompt: "You are a legal expert. When asked to rate agreement, respond with only a decimal number between 0 and 1, where 0 means strongly disagree and 1 means strongly agree. Do not provide explanations."
 
-numeric_filter:
-  regex: "^-?(?:0(?:\\.\\d+)?|1(?:\\.0+)?)$"  # accept 0—1 floats
-  cast: float
-  min_val: 0.0
-  max_val: 1.0
+# Global prompt templates
+prompts:
+  judge_behavior: "You are Justice Brett Kavanaugh of the US Supreme Court. Please respond as he would during oral arguments, considering legal precedent and constitutional interpretation."
+  appellant_behavior: "You are an experienced lawyer making an oral argument to the Supreme Court. Present your case clearly and persuasively, addressing potential concerns from the justices."
+  
+  # belief_measurement: "RESPOND WITH ONLY A NUMBER 0-1: How much do you agree with this legal argument?"
+  # belief_measurement_system: "You are a legal expert. When asked to rate agreement, respond with only a decimal number between 0 and 1, where 0 means strongly disagree and 1 means strongly agree. Do not provide explanations."
+  
+  # Templates for generating belief measurement questions
+  argument_belief_template: "On a scale of 0-1, how strongly do you agree with the {arg_type}'s argument: {argument_text}"
+  sub_argument_belief_template: "How strongly do you agree with the {arg_type}'s sub-argument: {sub_argument_text}"
+  
+  # Template for character assessment questions
+  character_assessment_template: |
+    Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:
 
-parallel:
-  backend: "asyncio"     # {asyncio | ray | multiprocessing}
-  max_concurrency: 8
-  max_workers: 8
+    {attribute_text}
+
+    RESPOND ONLY WITH A NUMBER 0-1.
+
+# numeric_filter:
+#   regex: "^-?(?:0(?:\\.\\d+)?|1(?:\\.0+)?)$"  # accept 0—1 floats
+#   cast: float
+#   min_val: 0.0
+#   max_val: 1.0
+
+# parallel:
+#   backend: "asyncio"     # {asyncio | ray | multiprocessing}
+#   max_concurrency: 8
+#   max_workers: 8
 
 paths:
-  raw_beliefs: "data/raw_beliefs.parquet"
-  agg_beliefs: "data/agg_beliefs.parquet"
-  arguments_json: "data/extracted_arguments.json"
+  # raw_beliefs: "data/raw_beliefs.parquet"
+  # agg_beliefs: "data/agg_beliefs.parquet"
+  # arguments_json: "data/extracted_arguments.json"
   case_pdfs:
     petitioner: "data/petitioner.pdf"
     respondent: "data/respondent.pdf"
@@ -62,30 +82,23 @@ paths:
     question_template: "data/character_attribute_question.txt"
     generated_questions: "data/character_questions.json"
 
-progress:
-  style: "rich"          # {rich | tqdm | off}
-  refresh_every: 1.0     # seconds
+# progress:
+#   style: "rich"          # {rich | tqdm | off}
+#   refresh_every: 1.0     # seconds
 
-logging:
-  level: "INFO"
-  cache_dir: ".cache/llm"
+# logging:
+#   level: "INFO"
+#   cache_dir: ".cache/llm"
 
 # Experiment-specific settings
 experiments:
   minimum_viable:
-    test_run: false
+    # test_run: false
     brief_context_limit: 10000  # characters
-    
-    prompts:
-      judge_behavior: "You are Justice Brett Kavanaugh of the US Supreme Court. Please respond as he would during oral arguments, considering legal precedent and constitutional interpretation."
-      appellant_behavior: "You are an experienced lawyer making an oral argument to the Supreme Court. Present your case clearly and persuasively, addressing potential concerns from the justices."
       
-      belief_measurement: "RESPOND WITH ONLY A NUMBER 0-1: How much do you agree with this legal argument?"
-      belief_measurement_system: "You are a legal expert. When asked to rate agreement, respond with only a decimal number between 0 and 1, where 0 means strongly disagree and 1 means strongly agree. Do not provide explanations."
-      
-    character_attributes:
-      - "judicial temperament"
-      - "legal reasoning ability" 
-      - "advocacy effectiveness"
-      - "constitutional knowledge"
-      - "precedent awareness"
+    # character_attributes:
+    #   - "judicial temperament"
+    #   - "legal reasoning ability" 
+    #   - "advocacy effectiveness"
+    #   - "constitutional knowledge"
+    #   - "precedent awareness"

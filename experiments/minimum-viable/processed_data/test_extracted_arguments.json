@@ -1,0 +1,106 @@
+[
+  {
+    "argument": "When the FDA rejects a manufacturer\u2019s proposal to warn about a disclosed risk, the manufacturer cannot be penalized for failing to warn of that risk",
+    "sub_arguments": [
+      {
+        "argument": "Failure-to-warn claims are preempted if federal law would have forbidden the manufacturer to revise its label",
+        "sub_arguments": []
+      },
+      {
+        "argument": "Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted",
+        "sub_arguments": []
+      },
+      {
+        "argument": "Respondents\u2019 failure-to-warn claims are preempted",
+        "sub_arguments": []
+      }
+    ],
+    "type": "petitioner"
+  },
+  {
+    "argument": "The Third Circuit misunderstood Levine and the regulatory scheme",
+    "sub_arguments": [
+      {
+        "argument": "The fda\u2019s real-world action here eliminates the need for counterfactual inquiry",
+        "sub_arguments": []
+      },
+      {
+        "argument": "The third circuit\u2019s approach also led it astray in other ways",
+        "sub_arguments": []
+      }
+    ],
+    "type": "petitioner"
+  },
+  {
+    "argument": "In light of the fda\u2019s position here, Merck must prevail",
+    "sub_arguments": [],
+    "type": "petitioner"
+  },
+  {
+    "argument": "Failure-to-warn claims against brand-name drug manufacturers are not preempted unless the manufacturer shows by clear evidence that FDA would have rescinded an adequate label change",
+    "sub_arguments": [
+      {
+        "argument": "The FDCA does not expressly preempt failure-to-warn claims against brand-name drug manufacturers, and such claims pose no obstacle to the statute\u2019s purposes",
+        "sub_arguments": []
+      },
+      {
+        "argument": "A brand-name drug manufacturer has the power to strengthen a drug label to comply with state law",
+        "sub_arguments": []
+      },
+      {
+        "argument": "The 2007 FDCA amendments do not preempt state law",
+        "sub_arguments": []
+      }
+    ],
+    "type": "respondent"
+  },
+  {
+    "argument": "Merck has not shown by clear evidence that FDA would have rescinded an adequate warning of atypical femoral fractures",
+    "sub_arguments": [
+      {
+        "argument": "The complete response letter regarding merck\u2019s proposed stress-fracture warning did not preclude Merck from adding an adequate warning of atypical femoral fractures",
+        "sub_arguments": [
+          {
+            "argument": "Merck never proposed an accurate warning of atypical femoral fractures",
+            "sub_arguments": []
+          },
+          {
+            "argument": "The complete response letter did not preclude Merck from adding an adequate warning of atypical femoral fractures through a CBE supplement",
+            "sub_arguments": []
+          },
+          {
+            "argument": "The government\u2019s post hoc interpretations of the complete response letter are implausible and inconsistent with FDA regulations",
+            "sub_arguments": []
+          }
+        ]
+      },
+      {
+        "argument": "Merck\u2019s informal communications with FDA do not establish preemption",
+        "sub_arguments": []
+      },
+      {
+        "argument": "Fda\u2019s decision to mandate an atypical-femoral-fracture warning undercuts merck\u2019s preemption defense",
+        "sub_arguments": []
+      }
+    ],
+    "type": "respondent"
+  },
+  {
+    "argument": "The third circuit\u2019s guidance for the district court on remand was correct",
+    "sub_arguments": [
+      {
+        "argument": "A jury should resolve disputed factual questions necessary for preemption",
+        "sub_arguments": []
+      },
+      {
+        "argument": "The Third Circuit correctly required a heightened standard of proof for impossibility preemption under Levine",
+        "sub_arguments": []
+      },
+      {
+        "argument": "Granting summary judgment would violate respondents\u2019 procedural rights",
+        "sub_arguments": []
+      }
+    ],
+    "type": "respondent"
+  }
+]

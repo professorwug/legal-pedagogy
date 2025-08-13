@@ -9,6 +9,7 @@ and PDF argument extraction.
 __version__ = "0.1.0"
 __author__ = "Legal Pedagogy Team"
 
+from .api import extract_arguments, belief_vector
 from .case_beliefs import CaseBeliefAnalyzer
 from .character_beliefs import CharacterBeliefAnalyzer
 from .thermometer import thermo, monte_carlo_belief_of, BeliefResults, BeliefDistribution
@@ -33,6 +34,8 @@ from .models import (
 )
 
 __all__ = [
+    "extract_arguments",
+    "belief_vector",
     "CaseBeliefAnalyzer", 
     "CharacterBeliefAnalyzer",
     "thermo",
