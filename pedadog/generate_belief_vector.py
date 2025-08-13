@@ -314,14 +314,14 @@ def parse_markdown_to_json(markdown_text: str, document_type: str) -> List[Dict[
     return arguments
 
 
-def extract_arguments_from_pdf_new_strategy(
+def extract_arguments_from_pdf(
     pdf_path: Path,
     document_type: str,
     model,
     context_words: int = 3000
 ) -> List[Dict[str, Any]]:
     """
-    Extract arguments using the new 4-step strategy.
+    Extract arguments from a PDF file.
     
     Args:
         pdf_path: Path to PDF file
@@ -332,7 +332,7 @@ def extract_arguments_from_pdf_new_strategy(
     Returns:
         List of argument dictionaries
     """
-    print(f"Processing {document_type} PDF with new strategy...")
+    print(f"Processing {document_type} PDF...")
     
     # Step 1: Extract full PDF text
     full_text = extract_pdf_text(pdf_path)
@@ -363,9 +363,8 @@ def extract_arguments_from_pdf_new_strategy(
 def extract_arguments_from_pdfs(
     petitioner_pdf: Path,
     respondent_pdf: Path,
-    model=None,
+    model,
     output_path: Optional[Path] = None,
-    use_new_strategy: bool = True,
     context_words: int = 3000
 ) -> List[Dict[str, Any]]:
     """
@@ -374,48 +373,31 @@ def extract_arguments_from_pdfs(
     Args:
         petitioner_pdf: Path to petitioner.pdf
         respondent_pdf: Path to respondent.pdf
-        model: LLM model for extraction (required for new strategy)
+        model: LLM model for extraction (required)
         output_path: Path to save the extracted arguments JSON (optional)
-        use_new_strategy: Whether to use the new 4-step extraction strategy
-        context_words: Number of words to include after TOC in new strategy
+        context_words: Number of words to include after TOC
         
     Returns:
         List of all arguments from both documents
     """
+    if not model:
+        raise ValueError("Model is required for argument extraction")
+    
     all_arguments = []
     
-    if use_new_strategy and model:
-        # Use new strategy
-        petitioner_args = extract_arguments_from_pdf_new_strategy(
-            petitioner_pdf, 'petitioner', model, context_words
-        )
-        respondent_args = extract_arguments_from_pdf_new_strategy(
-            respondent_pdf, 'respondent', model, context_words
-        )
-    else:
-        # Fallback to old strategy (kept for compatibility)
-        print("Using fallback extraction strategy...")
-        petitioner_text = extract_pdf_text(petitioner_pdf)
-        respondent_text = extract_pdf_text(respondent_pdf)
-        
-        # Simple fallback - create basic arguments
-        petitioner_args = [{
-            'argument': 'Petitioner arguments could not be extracted',
-            'sub_arguments': [],
-            'type': 'petitioner'
-        }]
-        
-        respondent_args = [{
-            'argument': 'Respondent arguments could not be extracted', 
-            'sub_arguments': [],
-            'type': 'respondent'
-        }]
+    # Extract arguments from PDFs
+    petitioner_args = extract_arguments_from_pdf(
+        petitioner_pdf, 'petitioner', model, context_words
+    )
+    respondent_args = extract_arguments_from_pdf(
+        respondent_pdf, 'respondent', model, context_words
+    )
     
     all_arguments.extend(petitioner_args)
     all_arguments.extend(respondent_args)
     
-    print(f"Extracted {len(petitioner_args)} arguments from petitioner brief")
-    print(f"Extracted {len(respondent_args)} arguments from respondent brief")
+    # print(f"Extracted {len(petitioner_args)} arguments from petitioner brief")
+    # print(f"Extracted {len(respondent_args)} arguments from respondent brief")
     
     # Save to file if requested
     if output_path:
@@ -478,7 +460,7 @@ def generate_belief_vector_from_pdfs(
     petitioner_pdf: Path,
     respondent_pdf: Path,
     prompt: str,
-    extraction_model=None,
+    extraction_model,
     belief_models: Optional[List] = None,
     context: str = "",
     save_arguments_path: Optional[Path] = None,
