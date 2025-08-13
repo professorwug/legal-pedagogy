@@ -19,7 +19,7 @@ from .thermometer import thermo, BeliefResults
 
 def _load_config() -> dict:
     """Load configuration from config.yaml."""
-    config_path = Path(__file__).parent.parent / "config.yaml"
+    config_path = Path(__file__).parent / "config.yaml"
     with config_path.open() as f:
         return yaml.safe_load(f)
 
@@ -100,8 +100,19 @@ def belief_vector(
                     )
                     questions.append(sub_arg_text)
     
-    # Add character assessment questions if rubric is provided
-    if path_to_character_rubric:
+    # Add character assessment questions from config or file
+    character_template = prompts["character_assessment_template"]
+    
+    # First try to use character attributes from config
+    if "character_attributes" in config:
+        for attribute in config["character_attributes"]:
+            character_question = character_template.format(
+                attribute_text=attribute
+            )
+            questions.append(character_question)
+    
+    # If path_to_character_rubric is provided, use that as fallback/override
+    elif path_to_character_rubric:
         try:
             # Load character rubric (text file with one attribute per line)
             rubric_path = Path(path_to_character_rubric)
@@ -109,7 +120,6 @@ def belief_vector(
                 rubric_lines = f.readlines()
             
             # Create questions for each rubric item using config template
-            character_template = prompts["character_assessment_template"]
             for line in rubric_lines:
                 line = line.strip()
                 if line and not line.startswith("#"):  # Skip empty lines and comments

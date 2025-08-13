@@ -11,14 +11,14 @@
       0.4
     ],
     "How strongly do you agree with the petitioner's sub-argument: Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted": [
-      0.7,
       0.5,
-      0.3
+      0.3,
+      0.7
     ],
     "How strongly do you agree with the petitioner's sub-argument: Respondents\u2019 failure-to-warn claims are preempted": [
+      0.7,
       0.6,
-      0.4,
-      0.7
+      0.4
     ],
     "On a scale of 0-1, how strongly do you agree with the petitioner's argument: The Third Circuit misunderstood Levine and the regulatory scheme": [
       0.3,
@@ -26,73 +26,73 @@
       0.5
     ],
     "How strongly do you agree with the petitioner's sub-argument: The fda\u2019s real-world action here eliminates the need for counterfactual inquiry": [
+      0.7,
       0.4,
-      0.3,
-      0.7
+      0.3
     ],
     "How strongly do you agree with the petitioner's sub-argument: The third circuit\u2019s approach also led it astray in other ways": [
+      0.6,
       0.5,
-      0.4,
-      0.6
+      0.4
     ],
     "On a scale of 0-1, how strongly do you agree with the petitioner's argument: In light of the fda\u2019s position here, Merck must prevail": [
       0.3,
-      0.7,
-      0.5
+      0.5,
+      0.7
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.4,
       0.2,
-      0.5
+      0.5,
+      0.4
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
       0.1,
-      0.4,
-      0.3
+      0.3,
+      0.4
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.2,
+      0.5,
       0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.2,
       0.3,
-      0.4
+      0.4,
+      0.2
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.1,
-      0.3
+      0.3,
+      0.5
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.4,
+      0.2,
       0.5,
-      0.2
-    ],
-    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.3,
-      0.1,
       0.4
     ],
-    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court\u2019s questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.1,
+    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
+      0.4,
+      0.3,
+      0.1
+    ],
+    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court's questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
+      0.2,
       0.5,
-      0.2
+      0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
       0.4,
-      0.2,
-      0.3
+      0.3,
+      0.2
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.1,
+      0.5,
       0.3
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.4,
+      0.5,
       0.2
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
@@ -101,13 +101,13 @@
       0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.2,
+      0.5,
       0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.4,
       0.3,
+      0.4,
       0.2
     ]
   },
@@ -123,14 +123,14 @@
       0.4
     ],
     "How strongly do you agree with the petitioner's sub-argument: Where the FDA rejects a request to add a warning, failure-to-warn claims are preempted": [
-      0.7,
       0.5,
-      0.3
+      0.3,
+      0.7
     ],
     "How strongly do you agree with the petitioner's sub-argument: Respondents\u2019 failure-to-warn claims are preempted": [
+      0.7,
       0.6,
-      0.4,
-      0.7
+      0.4
     ],
     "On a scale of 0-1, how strongly do you agree with the petitioner's argument: The Third Circuit misunderstood Levine and the regulatory scheme": [
       0.3,
@@ -138,73 +138,73 @@
       0.5
     ],
     "How strongly do you agree with the petitioner's sub-argument: The fda\u2019s real-world action here eliminates the need for counterfactual inquiry": [
+      0.7,
       0.4,
-      0.3,
-      0.7
+      0.3
     ],
     "How strongly do you agree with the petitioner's sub-argument: The third circuit\u2019s approach also led it astray in other ways": [
+      0.6,
       0.5,
-      0.4,
-      0.6
+      0.4
     ],
     "On a scale of 0-1, how strongly do you agree with the petitioner's argument: In light of the fda\u2019s position here, Merck must prevail": [
       0.3,
-      0.7,
-      0.5
+      0.5,
+      0.7
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.4,
       0.2,
-      0.5
+      0.5,
+      0.4
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
       0.1,
-      0.4,
-      0.3
+      0.3,
+      0.4
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.2,
+      0.5,
       0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.2,
       0.3,
-      0.4
+      0.4,
+      0.2
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.1,
-      0.3
+      0.3,
+      0.5
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.4,
+      0.2,
       0.5,
-      0.2
-    ],
-    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.3,
-      0.1,
       0.4
     ],
-    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court\u2019s questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.1,
+    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
+      0.4,
+      0.3,
+      0.1
+    ],
+    "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court's questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
+      0.2,
       0.5,
-      0.2
+      0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
       0.4,
-      0.2,
-      0.3
+      0.3,
+      0.2
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.1,
+      0.5,
       0.3
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.4,
+      0.5,
       0.2
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
@@ -213,13 +213,13 @@
       0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.5,
       0.2,
+      0.5,
       0.1
     ],
     "Based on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n": [
-      0.4,
       0.3,
+      0.4,
       0.2
     ]
   }

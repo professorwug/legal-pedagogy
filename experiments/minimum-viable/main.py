@@ -28,7 +28,7 @@ from simple_models import get_models, create_judge_model
 
 def load_config() -> Dict[str, Any]:
     """Load experiment configuration."""
-    config_path = Path(__file__).parent.parent.parent / "config.yaml"
+    config_path = Path(__file__).parent.parent.parent / "pedadog" / "config.yaml"
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 

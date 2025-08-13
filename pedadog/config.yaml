@@ -90,15 +90,25 @@ paths:
 #   level: "INFO"
 #   cache_dir: ".cache/llm"
 
+# Character assessment attributes (from moot court rubric)
+character_attributes:
+  - "Demonstrates thorough knowledge of the record"
+  - "Directs the Court to important points in the record"
+  - "Clearly identifies and focuses on the central legal issue"
+  - "Understands relevant constitutional doctrines and applies them clearly"
+  - "Demonstrates thorough knowledge of the cases in the Table of Authorities"
+  - "Provides case citations to support arguments"
+  - "Stays on topic of the record"
+  - "Does not evade the Court's questions and answers questions clearly"
+  - "Answers questions with authority, identifying relevant rules and/or case names"
+  - "Uses questions to advance an argument by connecting responses to larger issues"
+  - "Demonstrates proper respect and courtesy toward the Court"
+  - "Speaks in a conversational but formal style"
+  - "Uses correct grammar and uses appropriate vocabulary"
+  - "Begins presentation with \"May it please the Court,\" and ends with a specific conclusion"
+
 # Experiment-specific settings
 experiments:
   minimum_viable:
     # test_run: false
     brief_context_limit: 10000  # characters
-      
-    # character_attributes:
-    #   - "judicial temperament"
-    #   - "legal reasoning ability" 
-    #   - "advocacy effectiveness"
-    #   - "constitutional knowledge"
-    #   - "precedent awareness"

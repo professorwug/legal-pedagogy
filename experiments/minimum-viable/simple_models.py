@@ -12,7 +12,7 @@ from pedadog.models import create_model_from_config, BaseLLM
 
 def load_config() -> dict:
     """Load configuration from config.yaml."""
-    config_path = Path(__file__).parent.parent.parent / "config.yaml"
+    config_path = Path(__file__).parent.parent.parent / "pedadog" / "config.yaml"
     
     with open(config_path, 'r') as f:
         config = yaml.safe_load(f)

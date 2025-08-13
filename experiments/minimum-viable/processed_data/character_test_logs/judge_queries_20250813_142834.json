@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": "2025-08-13T14:28:34.057489",
+    "query": "Test context for Supreme Court argument\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: The FDA's authority should be limited",
+    "query_number": 1,
+    "response": "0.6"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.057623",
+    "query": "Test context for Supreme Court argument\n\nOn a scale of 0-1, how strongly do you agree with the petitioner's argument: The FDA's authority should be limited",
+    "query_number": 2,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.058185",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 3,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.058377",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 4,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.058837",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 5,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.058940",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDirects the Court to important points in the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 6,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.059457",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 7,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.059687",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nClearly identifies and focuses on the central legal issue\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 8,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.060237",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 9,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.060360",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUnderstands relevant constitutional doctrines and applies them clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 10,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.060971",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 11,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.061088",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates thorough knowledge of the cases in the Table of Authorities\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 12,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.061956",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 13,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.062082",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nProvides case citations to support arguments\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 14,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.062703",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 15,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.062802",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nStays on topic of the record\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 16,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.063410",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court's questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 17,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.063518",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDoes not evade the Court's questions and answers questions clearly\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 18,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.064248",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 19,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.064356",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nAnswers questions with authority, identifying relevant rules and/or case names\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 20,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.064970",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 21,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.065094",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses questions to advance an argument by connecting responses to larger issues\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 22,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.065807",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 23,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.065944",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nDemonstrates proper respect and courtesy toward the Court\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 24,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.066767",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 25,
+    "response": "0.3"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.066871",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nSpeaks in a conversational but formal style\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 26,
+    "response": "0.4"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.067691",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 27,
+    "response": "0.2"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.067808",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nUses correct grammar and uses appropriate vocabulary\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 28,
+    "response": "0.5"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.068601",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 29,
+    "response": "0.1"
+  },
+  {
+    "timestamp": "2025-08-13T14:28:34.068705",
+    "query": "Test context for Supreme Court argument\n\nBased on this legal interaction, on a scale of 0 to 1, please rate the appellant on the following ability:\n\nBegins presentation with \"May it please the Court,\" and ends with a specific conclusion\n\nRESPOND ONLY WITH A NUMBER 0-1.\n",
+    "query_number": 30,
+    "response": "0.3"
+  }
+]
